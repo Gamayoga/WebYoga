@@ -1,0 +1,296 @@
+:root {
+    --utama: #c49a6f;
+    --bg: #010101;
+}
+
+/* mengatur nilai default margin, padding, box-sizing, outline, border, dan text-decoration untuk semua elemen */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+/* mengatur scroll menjadi smooth */
+html {
+    scroll-behavior: smooth;
+}
+
+/* mengatur warna latar belakang dan teks untuk body */
+body {
+    background-color: var(--bg);
+    color: #fff;
+}
+
+/* gaya untuk navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: #010101;
+    border-top: 1px solid var(--utama);
+    border-bottom: 1px solid var(--utama);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+/* gaya untuk logo pada navbar */
+.navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    font-style: italic;
+}
+
+.navbar .navbar-logo span {
+    color: var(--utama);
+}
+
+/* gaya untuk link navigasi pada navbar */
+.navbar .navbar-nav a {
+    color: #fff;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+}
+
+/* gaya hover untuk link navigasi pada navbar */
+.navbar .navbar-nav a:hover {
+    color: var(--utama);
+}
+
+/* gaya untuk home */
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../img/header-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.home::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1) 2%, rgba(255, 255, 255, 0) 50%);
+}
+
+.home .content {
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+
+/* gaya untuk judul dibagian home */
+.home .content h1 {
+    font-size: 5em;
+    color: #fff;
+    line-height: 1;
+}
+
+.home .content h1 span {
+    color: var(--utama);
+}
+
+/* gaya untuk paragraf dibagian home */
+.home .content p {
+    font-size: 1.6rem;
+    margin-top: 0.5rem;
+    line-height: 1.4;
+    font-weight: 100;
+}
+
+/* gaya untuk tombol call to action di bagian Home */
+.home .content .cta {
+    margin-top: 0.5rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    color: var(--bg);
+    background-color: var(--utama);
+}
+
+/* padding untuk bagian about, koleksi, dan pesan */
+.about, .koleksi, .pesan {
+    padding: 7rem 7% 1.4rem;
+}
+
+/* gaya untuk judul dibagian about, koleksi, dan pesan */
+.about h2, .koleksi h2, .pesan h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+    color: #fff;
+}
+
+.about h2 span, .koleksi h2 span, .pesan h2 span {
+    color: var(--utama);
+}
+
+/* bagian row dibagian about */
+.about .row {
+    display: flex;
+}
+
+/* gaya untuk gambar dibagian about */
+.about .row .about-img {
+    flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+    width: 100%;
+}
+
+/* gaya untuk konten dibagian about*/
+.about .row .content {
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+}
+
+/* gaya untuk judul konten dibagian about*/
+.about .row .content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* gaya untuk paragraf konten dibagian about*/
+.about .row .content p {    
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: var(--utama);
+    font-weight: 100;
+    line-height: 1.6;
+}
+
+/* gaya untuk koleksi */
+.koleksi h2 {
+    margin-bottom: 0;
+}
+
+.koleksi p {
+    color: var(--utama);
+    text-align: center;
+    max-width: 30rem;
+    margin: 0rem auto 2rem;
+    font-weight: 100;
+    line-height: 1.6;
+}
+
+.tengah {
+    text-align: center;
+    width: 100%;
+}
+
+.list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+/* gaya untuk koleksi-card */
+.koleksi-card {
+    width: 25%;
+    margin: 0 auto;
+}
+
+.koleksi-card img {
+    width: 65%;
+    border-radius: 50%;
+}
+
+.koleksi-card h3 {
+    margin: 0.5rem auto 2rem;
+}
+
+/* gaya untuk pesan */
+.pesan .tabel .tombol {
+    margin: 2rem auto 0;
+}
+
+.pesan .tabel .total {
+    margin: 0 auto 1rem;
+}
+
+/* gaya untuk form */
+form {
+    max-width: 500px;
+    margin: auto;
+    padding: 10px;
+    border: 3px solid var(--utama);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="radio"] {
+    background-color: #fff;
+    width: 1rem;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    color: var(--bg);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--utama);
+}
+
+/* gaya untuk footer */
+footer {
+    background-color: var(--utama);
+    text-align: center;
+    padding: 1rem 0 3rem;
+    margin-top: 3rem;
+}
+
+footer .link {
+    margin-bottom: 1.4rem;
+}
+
+footer .link a {
+    color: #fff;
+    padding: 0.7rem 1rem;
+}
+
+footer .link a:hover {
+    color: var(--bg);
+}
+
+footer .credit {
+    font-size: 0.8rem;
+}
+
+footer .credit a {
+    color: var(--bg);
+    font-weight: 700;
+}

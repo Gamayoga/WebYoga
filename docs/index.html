@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum Nusantara</title>
+
+    <!-- link ke file css eksternal -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- link ke file javascript eksternal -->
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <!-- logo navbar -->
+        <a href="#" class="navbar-logo">Museum<span>Nusantara</span>.</a>
+        
+        <!-- link navbar -->
+        <div class="navbar-nav">
+            <a href="#home">Home</a>
+            <a href="#about">Tentang Kami</a>
+            <a href="#koleksi">Koleksi Kami</a>
+            <a href="#pesan">Pesan Tiket</a>
+        </div>
+    </nav>
+
+    <section class="home" id="home">
+        <main class="content">
+            <!-- judul dan paragraf halaman utama -->
+            <h1>Mari Berkunjung ke Museum <span>Nusantara</span></h1>
+            <p>Kami berharap dapat memainkan peran penting dalam pendidikan dan pengembangan budaya masyarakat.</p>
+            <!-- tombol untuk pesan tiket -->
+            <a href="#pesan" class="cta">Pesan Tiket Sekarang</a>
+        </main>
+    </section>
+
+    <section id="about" class="about">
+        <h2>Tentang <span>Kami</span></h2>
+
+        <div class="row">
+            <!-- gambar tentang kami -->
+            <div class="about-img">
+                <img src="img/tentang-kami.jpg" alt="Tentang Kami">
+            </div>
+            <!-- konten tentang kami -->
+            <div class="content">
+                <h3>Kenapa berkunjung ke museum kami?</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quibusdam eligendi aperiam!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis deleniti culpa nemo facilis consequatur, aut quaerat quidem ab quisquam numquam?</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="koleksi" class="koleksi">
+        <div class="tengah">
+            <h2>Koleksi <span>Kami</span></h2>
+            <p>Koleksi artefak dan karya seni kami selama bulan Agustus</p>
+
+            <div class="list">
+                <!-- gambar artefak 1 -->
+                <div class="koleksi-card">
+                    <img src="img/Koleksi/artefak1.jpg" alt="artefak1">
+                    <h3>- Artefak 1 -</h3>
+                </div>
+                <!-- gambar artefak 2 -->
+                <div class="koleksi-card">
+                    <img src="img/Koleksi/artefak2.jpg" alt="artefak2">
+                    <h3>- Artefak 2 -</h3>
+                </div>
+                <!-- gambar artefak 3 -->
+                <div class="koleksi-card">
+                    <img src="img/Koleksi/artefak3.jpg" alt="artefak3">
+                    <h3>- Artefak 3 -</h3>
+                </div>
+                <!-- gambar artefak 4 -->
+                <div class="koleksi-card">
+                    <img src="img/Koleksi/artefak4.jpg" alt="artefak4">
+                    <h3>- Artefak 4 -</h3>
+                </div>
+                <!-- gambar karya seni 1 -->
+                <div class="koleksi-card">
+                    <img src="img/Koleksi/seni1.jpg" alt="seni1">
+                    <h3>- Karya Seni 1 -</h3>
+                </div>
+                <!-- gambar karya seni 2 -->
+                <div class="koleksi-card">
+                    <img src="img/Koleksi/seni2.jpg" alt="seni2">
+                    <h3>- Karya Seni 2 -</h3>
+                </div>
+                <!-- gambar karya seni 3 -->
+                <div class="koleksi-card">
+                    <img src="img/Koleksi/seni3.jpg" alt="seni3">
+                    <h3>- Karya Seni 3 -</h3>
+                </div>
+                <!-- gambar karya seni 4 -->
+                <div class="koleksi-card">
+                    <img src="img/Koleksi/seni4.jpg" alt="seni4">
+                    <h3>- Karya Seni 4 -</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pesan" class="pesan">
+        <h2>Pesan <span>Tiket</span></h2>
+        <!-- formulir pemesanan tiket -->
+        <form id="museum-form" action="data.php" method="GET">
+            <!-- input nama menggunakan type text -->
+            Nama              : <input type="text" size="100" name="inama"><br>
+            <!-- input jumlah pengunjung menggunakan type number -->
+            Jumlah Pengunjung : <input type="number" id="ijumlah" size="100" name="ijumlah"><br>
+            <!-- input tanggal kunjungan menggunakan type date -->
+            Tanggal Kunjungan : <input type="date" name="itanggal"><br>
+            <!-- input tujuan kunjungan menggunakan type select -->
+            Tujuan Kunjungan  : <select id="itujuan" name="itujuan" size="1"> 
+                                    <option value="">Tujuan</option>
+                                    <option value="studi">Studi (Rp 15.000)</option>
+                                    <option value="rekreasi">Rekreasi (Rp 20.000)</option>
+                                    <option value="riset">Riset (Rp 25.000)</option>
+                                </select><br>
+            <!-- input member menggunakan type radio -->
+            Member            : <input type="radio" name="imember" value="ya"> Ya
+                                <input type="radio" name="imember" value="tidak"> Tidak
+                                <!-- tombol untuk menghitung harga -->
+                                <input type="button" value="Cek Harga" onclick="hitung()">
+                                <div>
+                                    <p id="totalharga">Total Harga : </p>
+                                </div>
+                                <!-- tombol untuk mengirim formulir -->
+                                <button type="submit">Beli</button>
+        </form>
+    </section>
+
+    <footer>
+        <!-- link footer -->
+        <div class="link">
+            <a href="#home">Home</a>
+            <a href="#about">Tentang Kami</a>
+            <a href="#koleksi">Koleksi Kami</a>
+            <a href="#pesan">Pesan Tiket</a>
+        </div>
+
+        <!-- kredit footer -->
+        <div class="credit">
+            <p>Created by <a href="">Mohd. Gamayogya Anfahris</a>. | &copy; 2025.</p>
+        </div>
+    </footer> 
+</body>
+</html>
